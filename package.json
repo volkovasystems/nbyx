@@ -1,0 +1,45 @@
+{
+  "name": "nbyx",
+  "version": "0.0.0",
+  "description": "Reduce array into N by X matrix.",
+  "main": "nbyx.js",
+  "support": "nbyx.support.js",
+  "deploy": "nbyx.deploy.js",
+  "browser": "nbyx.deploy.js",
+  "scripts": {
+    "build": "babel nbyx.js --out-file nbyx.support.js --source-maps && webpack --progress --display-modules",
+    "test": "mocha nbyx-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/nbyx.git"
+  },
+  "keywords": [
+    "reduce",
+    "array",
+    "matrix",
+    "nbyx"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/nbyx/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/nbyx#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "doubt": "^0.27.0",
+    "falzy": "^0.20.0",
+    "filled": "^0.22.0",
+    "phlat": "^0.0.0",
+    "protype": "^0.22.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^2.6.1"
+  }
+}
