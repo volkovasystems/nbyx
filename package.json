@@ -1,6 +1,6 @@
 {
   "name": "nbyx",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Reduce array into N by X matrix.",
   "main": "nbyx.js",
   "support": "nbyx.support.js",
@@ -21,6 +21,10 @@
     "nbyx"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/nbyx/issues"
@@ -31,7 +35,7 @@
     "doubt": "^0.27.0",
     "falzy": "^0.20.0",
     "filled": "^0.22.0",
-    "phlat": "^0.0.0",
+    "phlat": "^0.1.0",
     "protype": "^0.22.0"
   },
   "devDependencies": {
@@ -40,6 +44,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.0.0"
   }
 }
