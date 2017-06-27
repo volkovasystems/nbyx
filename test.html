@@ -1,8 +1,37 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./nbyx.deploy.js">
-		</script>
+		<title>nbyx unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./nbyx.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "nbyx unit test", function( assert ) {
+
+				assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 ), [
+					[ 1, 2 ],
+					[ 3, 4 ],
+					[ 5, 6 ],
+					[ 7, 8 ]
+				], "should be deeply equal" );
+
+				assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 ), [
+					[ 1, 2, 3 ],
+					[ 4, 5, 6 ],
+					[ 7, 8 ]
+				], "should be deeply equal" );
+				
+			} );
+		</script>
+	</body>
 </html>
