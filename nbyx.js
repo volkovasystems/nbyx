@@ -54,8 +54,7 @@
 			"doubt": "doubt",
 			"falzy": "falzy",
 			"filled": "filled",
-			"phlat": "phlat",
-			"protype": "protype",
+			"phlat": "phlat"
 		}
 	@end-include
 */
@@ -64,7 +63,6 @@ const doubt = require( "doubt" );
 const falzy = require( "falzy" );
 const filled = require( "filled" );
 const phlat = require( "phlat" );
-const protype = require( "protype" );
 
 const nbyx = function nbyx( array, limit ){
 	/*;
@@ -83,7 +81,7 @@ const nbyx = function nbyx( array, limit ){
 		throw new Error( "invalid array" );
 	}
 
-	if( falzy( limit ) || !protype( limit, NUMBER ) ){
+	if( falzy( limit ) || typeof limit != "number" ){
 		throw new Error( "invalid limit" );
 	}
 

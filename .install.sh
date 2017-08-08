@@ -4,7 +4,6 @@ doubt \
 falzy \
 filled \
 phlat \
-protype \
 --save && \
 yarn add \
 babel-cli \
@@ -19,6 +18,5 @@ doubt \
 falzy \
 filled \
 phlat \
-protype \
 --save \
 --force-latest
