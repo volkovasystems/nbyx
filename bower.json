@@ -1,33 +1,27 @@
 {
-  "name": "nbyx",
-  "version": "0.2.0",
-  "description": "Reduce array into N by X matrix.",
-  "main": "nbyx.deploy.js",
-  "support": "nbyx.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "reduce",
-    "array",
-    "matrix",
-    "nbyx"
-  ],
-  "homepage": "https://github.com/volkovasystems/nbyx",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "doubt": "^0.34.0",
-    "falzy": "^0.23.0",
-    "filled": "^0.26.0",
-    "phlat": "^0.2.0"
-  }
+	"name": "nbyx",
+	"version": "0.2.0",
+	"description": "Reduce array into N by X matrix.",
+	"main": "nbyx.deploy.js",
+	"support": "nbyx.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"reduce",
+		"array",
+		"matrix",
+		"nbyx"
+	],
+	"homepage": "https://github.com/volkovasystems/nbyx",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
