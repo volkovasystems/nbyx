@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-28T05:32:51.241Z",
+	"end": "2017-08-28T05:33:39.181Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "nbyx",
+			"duration": 0,
+			"start": "2017-08-28T05:33:38.833Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "nbyx",
+			"duration": 166,
+			"start": "2017-08-28T05:33:38.833Z",
+			"end": "2017-08-28T05:33:38.999Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-28T05:33:38.835Z",
+					"end": "2017-08-28T05:33:38.835Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nbyx",
+					"associatedTest": "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]"
+				},
+				{
+					"start": "2017-08-28T05:33:38.950Z",
+					"end": "2017-08-28T05:33:38.950Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nbyx",
+					"associatedTest": "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]"
+				},
+				{
+					"start": "2017-08-28T05:33:38.951Z",
+					"end": "2017-08-28T05:33:38.951Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nbyx",
+					"associatedTest": "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]"
+				},
+				{
+					"start": "2017-08-28T05:33:38.999Z",
+					"end": "2017-08-28T05:33:38.999Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nbyx",
+					"associatedTest": "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]"
+				},
+				{
+					"start": "2017-08-28T05:33:38.999Z",
+					"end": "2017-08-28T05:33:38.999Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "nbyx"
+				}
+			]
+		},
+		{
+			"name": "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 )`",
+			"duration": 117,
+			"start": "2017-08-28T05:33:38.834Z",
+			"end": "2017-08-28T05:33:38.951Z",
+			"tests": [
+				{
+					"name": "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]",
+					"start": "2017-08-28T05:33:38.834Z",
+					"end": "2017-08-28T05:33:38.950Z",
+					"duration": 116,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 )`",
+			"duration": 48,
+			"start": "2017-08-28T05:33:38.951Z",
+			"end": "2017-08-28T05:33:38.999Z",
+			"tests": [
+				{
+					"name": "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]",
+					"start": "2017-08-28T05:33:38.951Z",
+					"end": "2017-08-28T05:33:38.999Z",
+					"duration": 48,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

@@ -66,6 +66,31 @@ const nbyx = require( "./nbyx.js" );
 
 describe( "nbyx", ( ) => {
 
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]", ( ) => {
+
+			assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 ), [
+				[ 1, 2 ],
+				[ 3, 4 ],
+				[ 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]", ( ) => {
+
+			assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 ), [
+				[ 1, 2, 3 ],
+				[ 4, 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
 } );
 
 //: @end-server

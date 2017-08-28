@@ -70,6 +70,31 @@ const path = require( "path" );
 
 describe( "nbyx", ( ) => {
 
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]", ( ) => {
+
+			assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 ), [
+				[ 1, 2 ],
+				[ 3, 4 ],
+				[ 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]", ( ) => {
+
+			assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 ), [
+				[ 1, 2, 3 ],
+				[ 4, 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +103,32 @@ describe( "nbyx", ( ) => {
 //: @client:
 
 describe( "nbyx", ( ) => {
+
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]", ( ) => {
+
+			assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 ), [
+				[ 1, 2 ],
+				[ 3, 4 ],
+				[ 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]", ( ) => {
+
+			assert.deepEqual( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 ), [
+				[ 1, 2, 3 ],
+				[ 4, 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
 } );
 
 //: @end-client
@@ -86,6 +137,52 @@ describe( "nbyx", ( ) => {
 //: @bridge:
 
 describe( "nbyx", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					return JSON.stringify( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 2 ) );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [
+				[ 1, 2 ],
+				[ 3, 4 ],
+				[ 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
+	describe( "`nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( nbyx( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 3 ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [
+				[ 1, 2, 3 ],
+				[ 4, 5, 6 ],
+				[ 7, 8 ]
+			] );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
